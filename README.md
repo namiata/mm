@@ -3,6 +3,7 @@
 ### Overall
 * Purple color made to JMU purple
 * Font change (Roboto)
+* Styling change
 
 ### Header
 * Logo update

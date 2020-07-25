@@ -29,7 +29,7 @@ function leapYear(year) {
 }
 
 //google api initiate
-var apiKey = 'AIzaSyD1oujbJFAJrD9Icdq0hdOiXjoUTpvblp0';
+var apiKey = 'AIzaSyB1d-Ol7m3XMOJiJqlW9cY1c8csu7HKtas';
 
 function handleClientLoad() {
   gapi.load('client', initClient);

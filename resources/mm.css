@@ -11,7 +11,7 @@ body {
     max-height: 300px;
   }
   body {
-    font-size: 16px;
+    font-size: 16px !important;
   }
   .twocontainer {
     width: 90% !important;
@@ -69,6 +69,12 @@ body {
   }
   .mmtwenty {
     margin-bottom: 20px;
+  }
+  .button {
+    font-size: 16px !important;
+  }
+  .buttonSubmit {
+    font-size: 16px !important;
   }
 }
 @media only screen and (max-width: 300px) {

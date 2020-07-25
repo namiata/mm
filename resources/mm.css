@@ -1,0 +1,385 @@
+body {
+  padding:0px;
+  margin:0px;
+  font-family: Roboto;
+  color: black;
+  font-size: 18px;
+  box-sizing: border-box !important;
+}
+@media only screen and (max-width: 900px) {
+  .carousel {
+    max-height: 300px;
+  }
+  body {
+    font-size: 14px;
+  }
+  .twocontainer {
+    width: 90% !important;
+  }
+  .menu {
+    display: none;
+  }
+  #mobmenu {
+    display: block !important;
+  }
+  #footer {
+    flex-direction: column;
+  }
+  #footeryt {
+    padding-right: 10px !important;
+  }
+  #eventcontainer {
+    flex-direction: column;
+  }
+  .prev, .next {
+    background-color: #45008480 !important;
+  }
+  .uevent {
+    width: 100% !important;
+    margin: 0px !important;
+    padding: 15px !important;
+    align-items: center !important;
+    align-content: center !important;
+  }
+  .mmbten {
+    margin-bottom: 20px !important;
+  }
+  #contactNEContainer {
+    flex-direction: column !important;
+  }
+  #rhEmail {
+    padding-top: 20px !important;
+  }
+  #responsecontainer input {
+    width: 100% !important;
+    font-size: 14px !important;
+  }
+  #responsecontainer textarea {
+    width: 100% !important;
+    font-size: 14px !important;
+  }
+  .contactInput {
+    width: 100% !important;
+  }
+  .officerbox {
+    flex-direction: column;
+  }
+  .officer {
+    width: 100% !important;
+  }
+  .mmtwenty {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  #header {
+    flex-direction: column;
+  }
+}
+
+p {
+  margin: 0px;
+}
+
+h1 {
+  margin: 0px;
+}
+
+.b {
+  font-weight: bold;
+}
+
+.purple {
+  color: #450084;
+}
+.white {
+  color: white;
+}
+.lpurple {
+  color: #b599CE !important;
+}
+.plink a {
+  text-decoration: underline;
+  color: #450084;
+}
+.plink a:hover {
+  color: #b599CE;
+}
+
+.wlink a {
+  text-decoration: underline;
+  color: white;
+}
+.wlink a:hover {
+  color: #b599CE;
+}
+.pbten {
+  padding-bottom: 10px;
+}
+.section {
+  border-bottom: 2px solid #450084;
+  padding-bottom: 20px;
+}
+#content {
+ min-height: 100vh; /* will cover the 100% of viewport */
+ overflow: hidden;
+ display: block;
+ position: relative;
+ /* height of your footer */
+}
+
+/* HEADER/MENU */
+
+#header {
+  overflow: hidden;
+  background-color: #450084;
+  padding: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#logo {
+  max-width: 225px;
+  float: left;
+}
+.menu {
+  float: right;
+}
+.menu a {
+  text-decoration: none;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.menu a:hover {
+  color: #b599CE;
+}
+#mobmenu {
+  display: none;
+  cursor: pointer;
+}
+.mobmenuitems {
+  background-color: #450084;
+  display: none;
+  z-index: 9;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.mobmenuitems a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+.mobmenuitems a:hover {
+  color: #b599CE;
+}
+
+
+/* ABOUT SECTION */
+
+#abouthead {
+  padding-bottom: 20px;
+  font-weight: bold;
+  float: none;
+}
+
+/* EVENTS SECTION */
+
+.wonecontainer {
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.twocontainer {
+  width: 70%;
+  float: none;
+}
+.threecontainer {
+  display: flex;
+}
+.sectionhead {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  float: none;
+}
+#eventcontainer {
+  padding-bottom: 20px;
+}
+.uevent {
+  width: 40%;
+  float: left;
+  padding: 2%;
+  border: #450084 solid;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  box-sizing: border-box;
+}
+#event2 {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+#calendarlink {
+  width: 21%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: #450084;
+  color: white;
+}
+#linktocalendarcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* FOOTER */
+
+#footer {
+  bottom: 0;
+  background-color: #333333;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0px;
+  height: 90px
+}
+.footericons {
+  float: right;
+  display: flex;
+}
+#footeryt {
+  padding-right: 0px;
+}
+
+/* CAROUSEL */
+
+.images {display: none}
+.carousel img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  display: block;
+}
+.carousel {
+  width: 100%;
+  height: 550px;
+  position: relative;
+  margin: auto;
+  background-color: black;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-size: 18px;
+  border-radius: 0 0px 0px 0;
+  user-select: none;
+  background-color: #450084;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* CONTACT FORM */
+#responsecontainer input {
+  width: 90%;
+  padding: 20px;
+  border: 1px solid #000;
+  font-size: 16px;
+}
+#responsecontainer textarea {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #000;
+  font-family: Roboto;
+  font-size:16px;
+  resize: none;
+  height: 165.6px !important;
+  justify-content: top;
+}
+.responseheads {
+  padding: 20px 0px 0px 0px;
+}
+.button {
+  background-color: #450084;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}
+.buttonSubmit {
+  background-color: #595959 !important;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: inherit;
+  font-size: 18px;
+  margin-top: 20px;
+  border: none;
+}
+.floatleft {
+  float: left;
+}
+.contactInput {
+  width: 50%;
+}
+
+
+/* OFFICERS */
+.officer {
+  width: 44.5%;
+  float: left;
+  padding: 2%;
+  border: #450084 solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.officerbox {
+  justify-content: space-between;
+}
+
+/*CALENDAR PAGE */
+.calendar {
+  padding-bottom: 20px;
+}
+
+/* PLUGINS */
+
+ion-icon {
+  color: #ffffff;
+  font-size: 30px;
+  padding: 20px 10px 20px 10px;
+  display: block;
+};

@@ -18,7 +18,7 @@
 * Images in image carousel posistioned a little different (more centered)
 * Arrows in image carousel changed
 * Removed news section
-* Added about section
+* Added about section (desc from BeInvolved page)
 * Added upcoming events section (pulled from Google Calendar)
 
 ### Contact
@@ -31,3 +31,10 @@
 * Increased logo size of social media icons
 * Added YouTube link to social media icons
 
+# Possible Other Changes
+
+### Overall
+* Add more social media plugs
+
+### Home
+* Add animation to the image carousel

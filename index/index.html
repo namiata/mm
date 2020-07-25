@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="mm.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="http://www.mmsports.org/wp-content/uploads/favicon.ico">
+    <title>Madison Motorsports</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://localhost/mm/mmjs.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+  </head>
+  <script async defer src="https://apis.google.com/js/api.js"
+    onload="this.onload=function(){};handleClientLoad();"
+    onreadystatechange="if (this.readyState === 'complete') this.onload();">
+  </script>
+  <body onload="timeoutLUC()"><div id="content">
+    <!-- HEADER -->
+    <div id="header">
+      <img href="#default" id="logo" src="http://localhost/mm/logomm.png">
+      <div class="menu">
+        <a href="http://localhost/mm" class="lpurple">HOME</a>
+        <a href="http://forum.mmsports.org">FORUMS</a>
+        <a href="http://localhost/mm/contact">CONTACT</a>
+        <a href="http://forum.mmsports.org/memberlist.php">MEMBERS</a>
+        <a href="http://localhost/mm/calendar" style="padding-right: 0px">CALENDAR</a>
+      </div>
+      <div id="mobmenu" onClick="toggleMobileMenu()" class="mobmenu">
+        <ion-icon id="mobmenuicon" name="menu-sharp"></ion-icon>
+      </div>
+    </div>
+    <div id="mobmenuitems" class="mobmenuitems">
+      <a href="http://localhost/mm" class="lpurple pbten">HOME</a>
+      <a href="http://forum.mmsports.org" class="pbten">FORUMS</a>
+      <a href="http://localhost/mm/contact" class="pbten">CONTACT</a>
+      <a href="http://forum.mmsports.org/memberlist.php" class="pbten">MEMBERS</a>
+      <a href="http://localhost/mm/calendar" class="pbten" href="1">CALENDAR</a>
+    </div>
+
+    <!-- IMAGE CAROUSEL -->
+    <div class="carousel">
+      <div class="images">
+        <img src="http://www.mmsports.org/wp-content/uploads/13414999913_29000a58ae_o.jpg">
+      </div>
+      <div class="images">
+        <img src="http://www.mmsports.org/wp-content/uploads/17814458_10103779118822459_1860021476030861408_o.jpg">
+      </div>
+      <div class="images">
+        <img src="http://www.mmsports.org/wp-content/uploads/11110168_10153384304039289_4719640210347417320_o.jpg">
+      </div>
+      <div class="images">
+        <img src="http://www.mmsports.org/wp-content/uploads/407040_10101054527315679_2058068561_n.jpg">
+      </div>
+      <div class="images">
+        <img src="http://www.mmsports.org/wp-content/uploads/18193408_10103850146138149_6250001802095975090_o.jpg">
+      </div>
+      <div class="images">
+        <img src="http://www.mmsports.org/wp-content/uploads/IMG_1376.jpg">
+      </div>
+      <div class="images">
+        <img src="http://www.mmsports.org/wp-content/uploads/11119114_10102357656584179_1359753060755895856_o.jpg">
+      </div>
+      <div class="images">
+        <img src="http://www.mmsports.org/wp-content/uploads/24301348_10215931302545043_2421207885433591394_n.jpg">
+      </div>
+      <div class="images">
+        <img src="http://www.mmsports.org/wp-content/uploads/IMG_9562.jpg">
+      </div>
+      <div class="images">
+        <img src="http://www.mmsports.org/wp-content/uploads/jb-nasa_gl-pitt-7-19-12-ZF-2543-82252-1-001-scaled.jpg">
+      </div>
+      <div class="images">
+        <img src="https://i.imgur.com/EbmeDk0.jpg">
+      </div>
+
+    <a class="prev" onclick="changeImage(-1); resetCarouselTimer()"><ion-icon style="font-size: 20px; padding: 0px;" name="arrow-back"></ion-icon></a>
+    <a class="next" onclick="changeImage(1); resetCarouselTimer()"><ion-icon style="font-size: 20px; padding: 0px;" name="arrow-forward"></ion-icon></a>
+    </div>
+
+    <div class="wonecontainer">
+      <div class="twocontainer">
+        <div id="aboutsection" class="section">
+          <h1 id="abouthead" class="purple">About</h1>
+          <p>We are James Madison University's drivers club. Our goal is to help students enter the world of Motorsports. We help students take their first steps into auto-cross, drag racing, karting, road-course racing, competition showing, and drifting, among other types of racing. We do not condone street racing or other illegal activities, and instead, we offer a safe and regulated space for racing. Our main focus is Motorsports, but we are also a social club welcoming all people who like cars, bikes, trucks, or anything with an engine. Anyone with a passion for automobiles is welcome to join as we are a great place to meet and befriend other like-minded people and make connections in the automotive world.</p>
+        </div>
+        <h1 id="eventhead" class="purple sectionhead">Upcoming Events</h1>
+        <div id="eventcontainer" class="threecontainer">
+          <div class="uevent mmbten" id="event1">
+            <p class="plink pbten b" id="name1">Loading..</p>
+            <p id="date1" class="pbten">Loading..</p>
+            <p id="time1">Loading..</p>
+          </div>
+          <div class="uevent mmbten" id="event2">
+            <p class="plink pbten b" id="name2">Loading..</p>
+            <p id="date2" class="pbten">Loading..</p>
+            <p id="time2">Loading..</p>
+          </div>
+          <div class="uevent" id="calendarlink" >
+            <div id="linktocalendarcontainer" style="align-items: center; align-content: center; text-align: center">
+              <p class="wlink pbten" style="font-weight: bold;"><a href="calendar">Full Calendar</a></p>
+              <a href="calendar"><ion-icon style="color: white; padding: 0px; font-size: 50px;" name="calendar-sharp"></ion-icon></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!--content div -->
+
+    <!-- FOOTER -->
+    <div id="footer">
+      <p>&copy; 2020 Madison Motorsports</p>
+      <div class="footericons">
+        <a href="https://www.facebook.com/MadisonMotorsports/"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="https://www.instagram.com/madison_motorsports/"><ion-icon name="logo-instagram"></ion-icon></a>
+        <a href="https://twitter.com/mmsportsjmu"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href="https://www.youtube.com/channel/UCAKwXgk7G3l1vAXwgn90EIg"><ion-icon id="footeryt" name="logo-youtube"></ion-icon></a>
+      </div>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="http://localhost/mm/mmcarouseljs.js"></script>
+    <script src="http://localhost/mm/mmmenujs.js"></script>
+  </body>
+</html>

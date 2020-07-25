@@ -173,7 +173,8 @@ h1 {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
+    padding-bottom: 20px;
 }
 .mobmenuitems a:hover {
   color: #b599CE;

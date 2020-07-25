@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="http://localhost/mm/mm.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="http://www.mmsports.org/wp-content/uploads/favicon.ico">
+    <title>Calendar - Madison Motorsports</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://localhost/mm/mmjs.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+  </head>
+  <body><div id="content">
+    <!-- HEADER -->
+    <div id="header">
+      <img href="#default" id="logo" src="http://localhost/mm/logomm.png">
+      <div class="menu">
+        <a href="http://localhost/mm">HOME</a>
+        <a href="http://forum.mmsports.org">FORUMS</a>
+        <a href="http://localhost/mm/contact">CONTACT</a>
+        <a href="http://forum.mmsports.org/memberlist.php">MEMBERS</a>
+        <a href="http://localhost/mm/calendar" class="lpurple" style="padding-right: 0px">CALENDAR</a>
+      </div>
+      <div id="mobmenu" onClick="toggleMobileMenu()" class="mobmenu">
+        <ion-icon id="mobmenuicon" name="menu-sharp"></ion-icon>
+      </div>
+    </div>
+    <div id="mobmenuitems" class="mobmenuitems">
+      <a href="http://localhost/mm" class="pbten">HOME</a>
+      <a href="http://forum.mmsports.org" class="pbten">FORUMS</a>
+      <a href="http://localhost/mm/contact" class="pbten">CONTACT</a>
+      <a href="http://forum.mmsports.org/memberlist.php" class="pbten">MEMBERS</a>
+      <a href="calendar" class="lpurple pbten" href="1">CALENDAR</a>
+    </div>
+
+    <div class="wonecontainer">
+      <div class="twocontainer">
+        <h1 class="purple sectionhead">Calendar</h1>
+        <div class="calendar" id="calendar">
+          <iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=bWFkaXNvbm1vdG9yc3BvcnRzQGdtYWlsLmNvbQ&amp;color=%23F4511E&amp;showCalendars=1&amp;showTabs=1&amp;showDate=1&amp;showNav=1&amp;showTitle=0" style="border-width:0" width="100%" height="550px" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <p>&copy; 2020 Madison Motorsports</p>
+    <div class="footericons">
+      <a href="https://www.facebook.com/MadisonMotorsports/"><ion-icon name="logo-facebook"></ion-icon></a>
+      <a href="https://www.instagram.com/madison_motorsports/"><ion-icon name="logo-instagram"></ion-icon></a>
+      <a href="https://twitter.com/mmsportsjmu"><ion-icon name="logo-twitter"></ion-icon></a>
+      <a href="https://www.youtube.com/channel/UCAKwXgk7G3l1vAXwgn90EIg"><ion-icon style="padding-right: 0px" name="logo-youtube"></ion-icon></a>
+    </div>
+  </div>
+  <script src="http://localhost/mm/mmmenujs.js"></script>
+  </body>
+</html>

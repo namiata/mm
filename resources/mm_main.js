@@ -71,8 +71,15 @@ function listUpcomingEvents() {
         if (eventone.end.dateTime == null && eventone.start.dateTime == null) { var eonotime = "true"; } else { var eonotime = "false"; };
 
         //NAME
-        document.getElementById("name1").textContent = "<a target='_blank' href=" + eventone.htmlLink + ">" + eoname + "</a>"  //set div as event name
-
+        var eonamelink = document.createElement("a");
+        eonamelink.setAttribute("target","_blank");
+        eonamelink.SetAttribute("href", eventone.htmlLink);
+        eonamelink.textContent = eoname;
+        eonamelink.insertBefore(document.getElementById("event1"));
+        document.getElementById("name1").setAttribute("display", "none")
+         
+      
+      
         //DATE (google api is funky with all day events (finish at 12am next day instead of 11:59pm the same day))
         var eotimestartn = eotimestart.split("T")[0].split("-"); //rearrange date to normal american form
         var eotimeendn = eotimeend.split("T")[0].split("-");
@@ -168,7 +175,13 @@ function listUpcomingEvents() {
       if (eventtwo.end.dateTime == null && eventtwo.start.dateTime == null) { var etnotime = "true"; } else { var etnotime = "false"; };
 
       //NAME
-      document.getElementById("name2").textContent = "<a target='_blank' href=" + eventtwo.htmlLink + ">" + etname + "</a>"  //set div as event name
+        var etnamelink = document.createElement("a");
+        etnamelink.setAttribute("target","_blank");
+        etnamelink.SetAttribute("href", eventtwo.htmlLink);
+        etnamelink.textContent = etname;
+        etnamelink.insertBefore(document.getElementById("event2"));
+        document.getElementById("name2").setAttribute("display", "none")
+         
 
       //DATE (google api is funky with all day events (finish at 12am next day instead of 11:59pm the same day))
       var ettimestartn = ettimestart.split("T")[0].split("-"); //rearrange date to normal american form

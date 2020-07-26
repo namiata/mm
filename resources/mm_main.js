@@ -71,7 +71,7 @@ function listUpcomingEvents() {
         if (eventone.end.dateTime == null && eventone.start.dateTime == null) { var eonotime = "true"; } else { var eonotime = "false"; };
 
         //NAME
-        document.getElementById("name1").innerHTML = "<a target='_blank' href=" + eventone.htmlLink + ">" + eoname + "</a>"  //set div as event name
+        document.getElementById("name1").textContent = "<a target='_blank' href=" + eventone.htmlLink + ">" + eoname + "</a>"  //set div as event name
 
         //DATE (google api is funky with all day events (finish at 12am next day instead of 11:59pm the same day))
         var eotimestartn = eotimestart.split("T")[0].split("-"); //rearrange date to normal american form
@@ -120,17 +120,17 @@ function listUpcomingEvents() {
           }
         }
         if (eodates === eodatee) { //final date set
-          document.getElementById("date1").innerHTML = eodates; var eorangeofdates = "false";
+          document.getElementById("date1").textContent = eodates; var eorangeofdates = "false";
         } else {
-          document.getElementById("date1").innerHTML = eodates + " - " + eodatee; var eorangeofdates = "true";
+          document.getElementById("date1").textContent = eodates + " - " + eodatee; var eorangeofdates = "true";
         }
 
         //TIME
         if (eorangeofdates === "true") {  //if range of dates or no time listed then there is no time needed
-          document.getElementById("time1").innerHTML = "Multiday event";
+          document.getElementById("time1").textContent = "Multiday event";
         } else {
           if (eonotime === "true") {
-            document.getElementById("time1").innerHTML = "All day event";
+            document.getElementById("time1").textContent = "All day event";
           } else {
             if (eoNSCT === "true") { //set event start time
               var eoStartTimeC = "?"; //if no start time but end time
@@ -144,15 +144,15 @@ function listUpcomingEvents() {
               var eoEndTime = eotimeend.split("T")[1].split("-")[0];
               var eoEndTimeC = tConvert(eoEndTime);
             }
-            document.getElementById("time1").innerHTML = eoStartTimeC + " - " + eoEndTimeC
+            document.getElementById("time1").textContent = eoStartTimeC + " - " + eoEndTimeC
           }
         }
 
     //EVENT TWO
     if (eventtwo == null) { //only one event in the future planned
-      document.getElementById("name2").innerHTML = "No event planned currently.";
-      document.getElementById("date2").innerHTML = "";
-      document.getElementById("time2").innerHTML = "";
+      document.getElementById("name2").textContent = "No event planned currently.";
+      document.getElementById("date2").textContent = "";
+      document.getElementById("time2").textContent = "";
     } else { //there is a second event
       var etname = eventtwo.summary;
       if (eventtwo.start.dateTime == null) { //if time assosicated with event start
@@ -168,7 +168,7 @@ function listUpcomingEvents() {
       if (eventtwo.end.dateTime == null && eventtwo.start.dateTime == null) { var etnotime = "true"; } else { var etnotime = "false"; };
 
       //NAME
-      document.getElementById("name2").innerHTML = "<a target='_blank' href=" + eventtwo.htmlLink + ">" + etname + "</a>"  //set div as event name
+      document.getElementById("name2").textContent = "<a target='_blank' href=" + eventtwo.htmlLink + ">" + etname + "</a>"  //set div as event name
 
       //DATE (google api is funky with all day events (finish at 12am next day instead of 11:59pm the same day))
       var ettimestartn = ettimestart.split("T")[0].split("-"); //rearrange date to normal american form
@@ -217,16 +217,16 @@ function listUpcomingEvents() {
         }
       }
       if (etdates === etdatee) { //final date set
-        document.getElementById("date2").innerHTML = etdates; var etrangetfdates = "false";
+        document.getElementById("date2").textContent = etdates; var etrangetfdates = "false";
       } else {
-        document.getElementById("date2").innerHTML = etdates + " - " + etdatee;
+        document.getElementById("date2").textContent = etdates + " - " + etdatee;
       }
 
 
 
       //TIME
       if ((etrangetfdates === "true") || (etnotime === "true")) {
-        document.getElementById("time2").innerHTML = " "; //if range of dates or no time listed then there is no time needed
+        document.getElementById("time2").textContent = " "; //if range of dates or no time listed then there is no time needed
       } else {
         if (etNSCT === "true") { //set event start time
           var etStartTimeC = "?"; //if no start time but end time
@@ -240,18 +240,18 @@ function listUpcomingEvents() {
           var etEndTime = ettimeend.split("T")[1].split("-")[0];
           var etEndTimeC = tConvert(etEndTime);
         }
-        document.getElementById("time2").innerHTML = etStartTimeC + " - " + etEndTimeC
+        document.getElementById("time2").textContent = etStartTimeC + " - " + etEndTimeC
       }
     }
 
     //NO CALENDAR EVENTS
     } else {
-      document.getElementById("name1").innerHTML = "No event planned currently.";
-      document.getElementById("date1").innerHTML = "";
-      document.getElementById("time1").innerHTML = "";
-      document.getElementById("name2").innerHTML = "No event planned currently.";
-      document.getElementById("date2").innerHTML = "";
-      document.getElementById("time2").innerHTML = "";
+      document.getElementById("name1").textContent = "No event planned currently.";
+      document.getElementById("date1").textContent = "";
+      document.getElementById("time1").textContent = "";
+      document.getElementById("name2").textContent = "No event planned currently.";
+      document.getElementById("date2").textContent = "";
+      document.getElementById("time2").textContent = "";
     }
   });
 }

@@ -239,24 +239,27 @@ function listUpcomingEvents() {
 
 
       //TIME
-      if ((etrangetfdates === "true") || (etnotime === "true")) {
-        document.getElementById("time2").textContent = " "; //if range of dates or no time listed then there is no time needed
-      } else {
-        if (etNSCT === "true") { //set event start time
-          var etStartTimeC = "?"; //if no start time but end time
-        } else { //convert time from 24h to 12h
-          var etStartTime = ettimestart.split("T")[1].split("-")[0];
-          var etStartTimeC = tConvert(etStartTime);
+      if (etrangeofdates === "true") {  //if range of dates or no time listed then there is no time needed
+          document.getElementById("time2").textContent = "Multiday event";
+        } else {
+          if (etnotime === "true") {
+            document.getElementById("time2").textContent = "All day event";
+          } else {
+            if (etNSCT === "true") { //set event start time
+              var etStartTimeC = "?"; //if no start time but end time
+            } else { //convert time from 24h to 12h
+              var etStartTime = ettimestart.split("T")[1].split("-")[0];
+              var etStartTimeC = tConvert(etStartTime);
+            }
+            if (etNECT === "true") {
+              var etEndTimeC = "?" //if no end time but start time
+            } else { //convert time from 24h to 12h
+              var etEndTime = ettimeend.split("T")[1].split("-")[0];
+              var etEndTimeC = tConvert(etEndTime);
+            }
+            document.getElementById("time2").textContent = etStartTimeC + " - " + etEndTimeC
+          }
         }
-        if (etNECT === "true") {
-          var etEndTimeC = "?" //if no end time but start time
-        } else { //convert time from 24h to 12h
-          var etEndTime = ettimeend.split("T")[1].split("-")[0];
-          var etEndTimeC = tConvert(etEndTime);
-        }
-        document.getElementById("time2").textContent = etStartTimeC + " - " + etEndTimeC
-      }
-    }
 
     //NO CALENDAR EVENTS
     } else {

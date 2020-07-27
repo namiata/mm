@@ -79,7 +79,7 @@ function listUpcomingEvents() {
         eonamelink.textContent = eoname;
         document.getElementById("event1").prepend(eonamelink);
         document.getElementById("name1").style.display = "none"
-         
+
         //DATE (google api is funky with all day events (finish at 12am next day instead of 11:59pm the same day))
         var eotimestartn = eotimestart.split("T")[0].split("-"); //rearrange date to normal american form
         var eotimeendn = eotimeend.split("T")[0].split("-");
@@ -134,25 +134,26 @@ function listUpcomingEvents() {
 
         //TIME
         if (eorangeofdates === "true") {  //if range of dates or no time listed then there is no time needed
-          document.getElementById("time1").textContent = "Multiday event";
+            document.getElementById("time1").textContent = "Multiday event"; var eotimeseo = "true";
         } else {
           if (eonotime === "true") {
-            document.getElementById("time1").textContent = "All day event";
-          } else {
-            if (eoNSCT === "true") { //set event start time
-              var eoStartTimeC = "?"; //if no start time but end time
-            } else { //convert time from 24h to 12h
-              var eoStartTime = eotimestart.split("T")[1].split("-")[0];
-              var eoStartTimeC = tConvert(eoStartTime);
-            }
-            if (eoNECT === "true") {
-              var eoEndTimeC = "?" //if no end time but start time
-            } else { //convert time from 24h to 12h
-              var eoEndTime = eotimeend.split("T")[1].split("-")[0];
-              var eoEndTimeC = tConvert(eoEndTime);
-            }
-            document.getElementById("time1").textContent = eoStartTimeC + " - " + eoEndTimeC
+              document.getElementById("time1").textContent = "All day event"; var eotimeseo = "true";
           }
+        }
+        if (eoNSCT === "true") { //seo event start time
+          var eoStartTimeC = "?"; //if no start time but end time)
+        } else { //convert time from 24h to 12h
+          var eoStartTime = eotimestart.split("T")[1].split("-")[0];
+          var eoStartTimeC = tConvert(eoStartTime);
+        }
+        if (eoNECT === "true") {
+          var eoEndTimeC = "?" //if no end time but start time
+        } else { //convert time from 24h to 12h
+          var eoEndTime = eotimeend.split("T")[1].split("-")[0];
+          var eoEndTimeC = tConvert(eoEndTime);
+        }
+        if (eotimeseo == null) {
+          document.getElementById("time1").textContent = eoStartTimeC + " - " + eoEndTimeC
         }
 
     //EVENT TWO
@@ -172,8 +173,7 @@ function listUpcomingEvents() {
       } else {
         var ettimeend = eventtwo.end.dateTime; var etNECT = "false";
       }
-      if (eventtwo.end.dateTime == null && eventtwo.start.dateTime == null) { var etnotime = "true"; } else { var etnotime = "false"; };
-
+      if (eventtwo.end.dateTime == null && eventtwo.start.dateTime == null) { window.etnotime = "true"; } else { window.etnotime = "false"; };
       //NAME
       var etlink = eventtwo.htmlLink
       var etnamelink = document.createElement("a");
@@ -231,38 +231,40 @@ function listUpcomingEvents() {
         }
       }
       if (etdates === etdatee) { //final date set
-        document.getElementById("date2").textContent = etdates; var etrangetfdates = "false";
+        document.getElementById("date2").textContent = etdates; etrangeofdates = "false";
       } else {
-        document.getElementById("date2").textContent = etdates + " - " + etdatee;
+        document.getElementById("date2").textContent = etdates + " - " + etdatee; etrangeodates = "true";
       }
 
 
 
       //TIME
       if (etrangeofdates === "true") {  //if range of dates or no time listed then there is no time needed
-          document.getElementById("time2").textContent = "Multiday event";
-        } else {
-          if (etnotime === "true") {
-            document.getElementById("time2").textContent = "All day event";
-          } else {
-            if (etNSCT === "true") { //set event start time
-              var etStartTimeC = "?"; //if no start time but end time
-            } else { //convert time from 24h to 12h
-              var etStartTime = ettimestart.split("T")[1].split("-")[0];
-              var etStartTimeC = tConvert(etStartTime);
-            }
-            if (etNECT === "true") {
-              var etEndTimeC = "?" //if no end time but start time
-            } else { //convert time from 24h to 12h
-              var etEndTime = ettimeend.split("T")[1].split("-")[0];
-              var etEndTimeC = tConvert(etEndTime);
-            }
-            document.getElementById("time2").textContent = etStartTimeC + " - " + etEndTimeC
-          }
+          document.getElementById("time2").textContent = "Multiday event"; var ettimeset = "true";
+      } else {
+        if (etnotime === "true") {
+            document.getElementById("time2").textContent = "All day event"; var ettimeset = "true";
         }
+      }
+      if (etNSCT === "true") { //set event start time
+        var etStartTimeC = "?"; //if no start time but end time)
+      } else { //convert time from 24h to 12h
+        var etStartTime = ettimestart.split("T")[1].split("-")[0];
+        var etStartTimeC = tConvert(etStartTime);
+      }
+      if (etNECT === "true") {
+        var etEndTimeC = "?" //if no end time but start time
+      } else { //convert time from 24h to 12h
+        var etEndTime = ettimeend.split("T")[1].split("-")[0];
+        var etEndTimeC = tConvert(etEndTime);
+      }
+      if (ettimeset == null) {
+        document.getElementById("time2").textContent = etStartTimeC + " - " + etEndTimeC
+      }
+    }
 
     //NO CALENDAR EVENTS
-    } else {
+  } else {
       document.getElementById("name1").textContent = "No event planned currently.";
       document.getElementById("date1").textContent = "";
       document.getElementById("time1").textContent = "";

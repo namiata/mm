@@ -119,6 +119,9 @@ function listUpcomingEvents() {
                 }
               }
             } else {
+              if (eodeday.length === 1) {
+                var eodeday = "0" + eodeday;
+              }
               var eodeday = "0" + eodeday;
               var eodatee = eodatee.split("/")[0] + "/" + eodeday + "/" + eodatee.split("/")[2];
             }
@@ -223,7 +226,9 @@ function listUpcomingEvents() {
               }
             }
           } else {
-            var etdeday = "0" + etdeday;
+            if (etdeday.length === 1) {
+              var etdeday = "0" + etdeday;
+            }
             var etdatee = etdatee.split("/")[0] + "/" + etdeday + "/" + etdatee.split("/")[2];
           }
         } else {

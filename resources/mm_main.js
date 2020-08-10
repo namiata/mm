@@ -122,7 +122,6 @@ function listUpcomingEvents() {
               if (eodeday.length === 1) {
                 var eodeday = "0" + eodeday;
               }
-              var eodeday = "0" + eodeday;
               var eodatee = eodatee.split("/")[0] + "/" + eodeday + "/" + eodatee.split("/")[2];
             }
           } else {

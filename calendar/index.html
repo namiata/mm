@@ -1,7 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="https://namiata.github.io/resources/mm.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="shortcut icon" href="https://namiata.github.io/resources/favicon.ico">
     <title>Calendar - Madison Motorsports</title>
@@ -16,28 +16,28 @@
       <img href="#default" id="logo" src="https://namiata.github.io/resources/logomm.png">
       <div class="menu">
         <a href="https://namiata.github.io/">HOME</a>
-        <a href="https://forum.mmsports.org">FORUMS</a>
+        <a href="https://namiata.github.io/join">JOIN</a>
+        <a href="https://namiata.github.io/calendar" class="lpurple">CALENDAR</a>
         <a href="https://namiata.github.io/contact">CONTACT</a>
-        <a href="https://forum.mmsports.org/memberlist.php">MEMBERS</a>
-        <a href="https://namiata.github.io/calendar" class="lpurple" style="padding-right: 0px">CALENDAR</a>
+        <a href="http://forum.mmsports.org" style="padding-right: 0px">FORUMS</a>
       </div>
       <div id="mobmenu" onClick="toggleMobileMenu()" class="mobmenu">
         <ion-icon id="mobmenuicon" name="menu-sharp"></ion-icon>
       </div>
     </div>
-    <div id="mobmenuitems" class="mobmenuitems">
-      <a href="https://namiata.github.io/">HOME</a>
-      <a href="https://forum.mmsports.org">FORUMS</a>
-      <a href="https://namiata.github.io/contact">CONTACT</a>
-      <a href="https://forum.mmsports.org/memberlist.php">MEMBERS</a>
-      <a href="https://namiata.github.io/calendar" class="lpurple">CALENDAR</a>
+    <div id="mobmenuitems" class="mobmenuitems" style="z-index:1">
+      <a href="https://namiata.github.io/" class="pbtwenty">HOME</a>
+      <a href="https://namiata.github.io/join" class="pbtwenty">JOIN</a>
+      <a href="https://namiata.github.io/calendar" class="lpurple pbtwenty">CALENDAR</a>
+      <a href="https://namiata.github.io/contact" class="pbtwenty">CONTACT</a>
+      <a href="http://forum.mmsports.org" class="pbtwenty">FORUMS</a>
     </div>
 
     <div class="wonecontainer">
       <div class="twocontainer">
         <h1 class="purple sectionhead">Calendar</h1>
         <div class="calendar" id="calendar">
-          <iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=bWFkaXNvbm1vdG9yc3BvcnRzQGdtYWlsLmNvbQ&amp;color=%23F4511E&amp;showCalendars=1&amp;showTabs=1&amp;showDate=1&amp;showNav=1&amp;showTitle=0" style="border-width:0" width="100%" height="550px" frameborder="0" scrolling="no"></iframe>
+          <iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=bWFkaXNvbm1vdG9yc3BvcnRzQGdtYWlsLmNvbQ&amp;color=%23F4511E&amp;showCalendars=1&amp;showTabs=1&amp;showDate=1&amp;showNav=1&amp;showTitle=0" style="border-width:0" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
         </div>
       </div>
     </div>
@@ -45,10 +45,10 @@
   <div id="footer">
     <p>&copy; 2020 Madison Motorsports</p>
     <div class="footericons">
-      <a href="https://www.facebook.com/MadisonMotorsports/"><ion-icon name="logo-facebook"></ion-icon></a>
-      <a href="https://www.instagram.com/madison_motorsports/"><ion-icon name="logo-instagram"></ion-icon></a>
-      <a href="https://twitter.com/mmsportsjmu"><ion-icon name="logo-twitter"></ion-icon></a>
-      <a href="https://www.youtube.com/channel/UCAKwXgk7G3l1vAXwgn90EIg"><ion-icon style="padding-right: 0px" name="logo-youtube"></ion-icon></a>
+      <a target="_blank" href="https://www.facebook.com/MadisonMotorsports/"><ion-icon name="logo-facebook"></ion-icon></a>
+      <a target="_blank" href="https://www.instagram.com/madison_motorsports/"><ion-icon name="logo-instagram"></ion-icon></a>
+      <a target="_blank" href="https://twitter.com/mmsportsjmu"><ion-icon name="logo-twitter"></ion-icon></a>
+      <a target="_blank" href="https://www.youtube.com/channel/UCAKwXgk7G3l1vAXwgn90EIg"><ion-icon id="footeryt" name="logo-youtube"></ion-icon></a>
     </div>
   </div>
   <script src="https://namiata.github.io/resources/mm_menu.js"></script>

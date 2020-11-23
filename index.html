@@ -20,25 +20,25 @@
     <div id="header">
       <img href="#default" id="logo" src="https://namiata.github.io/resources/logomm.png">
       <div class="menu">
-        <a href="https://namiata.github.io/" class="lpurple">HOME</a>
-        <a href="https://forum.mmsports.org">FORUMS</a>
+        <a href="https://namiata.github.io" class="lpurple">HOME</a>
+        <a href="https://namiata.github.io/join">JOIN</a>
+        <a href="https://namiata.github.io/calendar">CALENDAR</a>
         <a href="https://namiata.github.io/contact">CONTACT</a>
-        <a href="https://forum.mmsports.org/memberlist.php">MEMBERS</a>
-        <a href="https://namiata.github.io/calendar" style="padding-right: 0px">CALENDAR</a>
+        <a href="http://forum.mmsports.org" style="padding-right: 0px">FORUMS</a>
       </div>
       <div id="mobmenu" onClick="toggleMobileMenu()" class="mobmenu">
         <ion-icon id="mobmenuicon" name="menu-sharp"></ion-icon>
       </div>
     </div>
-    <div id="mobmenuitems" class="mobmenuitems">
-      <a href="https://namiata.github.io/" class="lpurple">HOME</a>
-      <a href="https://forum.mmsports.org">FORUMS</a>
-      <a href="https://namiata.github.io/contact">CONTACT</a>
-      <a href="https://forum.mmsports.org/memberlist.php">MEMBERS</a>
-      <a href="https://namiata.github.io/calendar">CALENDAR</a>
+    <div id="mobmenuitems" class="mobmenuitems" style="z-index:1">
+      <a href="https://namiata.github.io" class="lpurple pbtwenty">HOME</a>
+      <a href="https://namiata.github.io/join" class="pbtwenty">JOIN</a>
+      <a href="https://namiata.github.io/calendar" class="pbtwenty">CALENDAR</a>
+      <a href="https://namiata.github.io/contact" class="pbtwenty">CONTACT</a>
+      <a href="http://forum.mmsports.org" class="pbtwenty">FORUMS</a>
     </div>
-
-    <!-- IMAGE CAROUSEL -->
+    <div class="z-index:0">
+      <!-- IMAGE CAROUSEL -->
     <div class="carousel">
       <div class="images">
         <img src="https://namiata.github.io/resources/images/1.jpg">
@@ -77,8 +77,8 @@
         <img src="https://namiata.github.io/resources/images/12.jpg">
       </div>
 
-    <a class="prev" onclick="changeImage(-1); resetCarouselTimer()"><ion-icon style="font-size: 20px; padding: 0px;" name="arrow-back"></ion-icon></a>
-    <a class="next" onclick="changeImage(1); resetCarouselTimer()"><ion-icon style="font-size: 20px; padding: 0px;" name="arrow-forward"></ion-icon></a>
+      <a class="prev" onclick="changeImage(-1); resetCarouselTimer()"><ion-icon style="font-size: 20px; padding: 0px;" name="arrow-back"></ion-icon></a>
+      <a class="next" onclick="changeImage(1); resetCarouselTimer()"><ion-icon style="font-size: 20px; padding: 0px;" name="arrow-forward"></ion-icon></a>
     </div>
 
     <div class="wonecontainer">
@@ -107,17 +107,17 @@
           </div>
         </div>
       </div>
-    </div>
+    </div></div>
   </div> <!--content div -->
 
     <!-- FOOTER -->
     <div id="footer">
       <p>&copy; 2020 Madison Motorsports</p>
       <div class="footericons">
-        <a href="https://www.facebook.com/MadisonMotorsports/"><ion-icon name="logo-facebook"></ion-icon></a>
-        <a href="https://www.instagram.com/madison_motorsports/"><ion-icon name="logo-instagram"></ion-icon></a>
-        <a href="https://twitter.com/mmsportsjmu"><ion-icon name="logo-twitter"></ion-icon></a>
-        <a href="https://www.youtube.com/channel/UCAKwXgk7G3l1vAXwgn90EIg"><ion-icon id="footeryt" name="logo-youtube"></ion-icon></a>
+        <a target="_blank" href="https://www.facebook.com/MadisonMotorsports/"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a target="_blank" href="https://www.instagram.com/madison_motorsports/"><ion-icon name="logo-instagram"></ion-icon></a>
+        <a target="_blank" href="https://twitter.com/mmsportsjmu"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a target="_blank" href="https://www.youtube.com/channel/UCAKwXgk7G3l1vAXwgn90EIg"><ion-icon id="footeryt" name="logo-youtube"></ion-icon></a>
       </div>
     </div>
     <!-- SCRIPTS -->

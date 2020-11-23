@@ -119,7 +119,7 @@ function listUpcomingEvents() {
                 }
               }
             } else {
-              if (eodeday.length === 1) {
+              if (eodeday.toString().length === 1) {
                 var eodeday = "0" + eodeday;
               }
               var eodatee = eodatee.split("/")[0] + "/" + eodeday + "/" + eodatee.split("/")[2];
@@ -225,7 +225,7 @@ function listUpcomingEvents() {
               }
             }
           } else {
-            if (etdeday.length === 1) {
+            if (etdeday.toString().length === 1) {
               var etdeday = "0" + etdeday;
             }
             var etdatee = etdatee.split("/")[0] + "/" + etdeday + "/" + etdatee.split("/")[2];
@@ -235,9 +235,9 @@ function listUpcomingEvents() {
         }
       }
       if (etdates === etdatee) { //final date set
-        document.getElementById("date2").textContent = etdates; etrangeofdates = "false";
+        document.getElementById("date2").textContent = etdates; var etrangeofdates = "false";
       } else {
-        document.getElementById("date2").textContent = etdates + " - " + etdatee; etrangeodates = "true";
+        document.getElementById("date2").textContent = etdates + " - " + etdatee; var etrangeofdates = "true";
       }
 
 
